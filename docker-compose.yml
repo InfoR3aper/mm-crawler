@@ -1,0 +1,17 @@
+version: '3'
+services:
+  redis:
+    image: redis:alpine
+  app:
+    tty: true
+    stdin_open: true
+    build: ./
+    environment:
+      REDIS_URL: redis://redis:6379
+      MM_EMAIL: mm_email@mm.com
+      MM_PASSWORD:  mm_password
+    volumes:
+      - ~/Desktop/results:/results
+    depends_on:
+      - redis
+    command: ruby consolidate.rb

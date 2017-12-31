@@ -1,0 +1,12 @@
+require 'net/http'
+require 'uri'
+require 'pry'
+require 'sidekiq'
+require 'base64'
+require 'open-uri'
+require 'oj'
+
+require './mm_crawler/workers/nearby_crawler.rb'
+require './mm_crawler/workers/get_photos_json.rb'
+require './mm_crawler/workers/get_photo.rb'
+require './mm_crawler/cookie_service.rb'
