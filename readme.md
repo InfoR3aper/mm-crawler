@@ -33,7 +33,7 @@ In the `~/Desktop/results`, run `netlify deploy`.  Make note of the domain.
 
 Output folder structure (in Docker):
 
-`/results/{member_id}/`
+`/results/`
 
 - {member_id}.json
 - {member_id}_{photo_id}.jpg
